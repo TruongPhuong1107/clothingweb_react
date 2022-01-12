@@ -1,0 +1,186 @@
+main {
+  padding: 10px;
+}
+.tableTitle {
+  display: flex;
+  justify-content: center;
+}
+.isEmpty{
+  text-align: center;
+}
+.tableItem {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px rgb(83, 82, 82);
+}
+.tableItems .imgProCart {
+  padding: 10px 10px;
+  width: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tableItem .imgProCart img {
+  width: 50px;
+  height: 70px;
+}
+.tableItems .forResponsive {
+  width: calc(100% - (100% / 6));
+  display: flex;
+}
+.tableTitle > div {
+  padding: 10px 10px;
+  width: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px rgb(83, 82, 82);
+}
+.tableItems .forResponsive > div {
+  padding: 10px 10px;
+  width: calc(100% / 5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px rgb(83, 82, 82);
+}
+.tableItems .forResponsive > div {
+  border-bottom: none;
+}
+.totalPrice {
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+.total {
+  display: inline-block;
+  font-weight: 600;
+}
+.cart-table {
+  margin-top: 100px;
+  color: rgb(44, 43, 43);
+}
+.number {
+  height: 30px;
+  width: 50px;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.btn-group > .btnCheckout {
+  border: black 1px solid;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+.btnDelete button {
+  background: rgb(212, 45, 3);
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.btnDelete button:hover {
+  background: rgb(177, 59, 30, 0.9);
+}
+.buttons_added {
+  opacity: 1;
+  display: inline-block;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.is-form {
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+  height: 2.2rem;
+  width: 1.9rem;
+  padding: 0;
+  text-shadow: 1px 1px 1px #fff;
+  border: 1px solid #ddd;
+}
+.is-form:focus,
+.input-text:focus {
+  outline: none;
+}
+.is-form.minus {
+  border-radius: 4px 0 0 4px;
+}
+.is-form.plus {
+  border-radius: 0 4px 4px 0;
+}
+.input-qty {
+  background-color: #fff;
+  height: 2.2rem;
+  text-align: center;
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  padding: 0;
+}
+.input-qty::-webkit-outer-spin-button,
+.input-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media (max-width: 739px) {
+  .tableItems {
+    flex-direction: column;
+  }
+  .tableItems .imgProCart {
+    width: calc(100% / 3);
+  }
+  .tableItem .imgProCart img {
+    width: 100px;
+    height: 120px;
+  }
+  .tableItems .forResponsive {
+    width: calc(100% - (100% / 3));
+  }
+  .product-table {
+    border-top: 1px solid #999;
+  }
+  .tableTitle {
+    display: none;
+  }
+  .tableItems > .imgProCart,
+  .tableItem .forResponsive {
+    border-bottom: none;
+  }
+  .tableItems .forResponsive {
+    flex-direction: column;
+  }
+  .tableItems .forResponsive > div {
+    width: 100%;
+    justify-content: left;
+    padding: 5px 20px 10px;
+  }
+  .is-form {
+    height: 1.8rem;
+    width: 1.5rem;
+  }
+  .input-qty {
+    height: 1.8rem;
+  }
+  .input-qty::-webkit-outer-spin-button,
+  .input-qty::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .btn-group {
+    padding: 2px 7px;
+    font-size: 0.9rem;
+  }
+}

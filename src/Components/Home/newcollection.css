@@ -1,0 +1,59 @@
+.collections {
+  background-color: #ffff;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  margin-top: 10px;
+}
+.collectionsTitle {
+  text-align: center;
+  padding: 30px 30px;
+  font-size: 1.5rem;
+  font-family: 'PT Sans', sans-serif;
+  color: rgb(70, 59, 45);
+  font-weight: 600;
+}
+.collectionList {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 -20px 20px 0;
+  width: calc(100% + 20px);
+}
+.collectionList .collectionItem {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 0 20px 0px 0px;
+}
+.collectionList .collectionItem .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.collectionList .collectionItem .imgBox img {
+  position: absolute;
+  left: 0px;
+  height: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collectionList .collectionItem .collectionName {
+  padding: 10px 0px;
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  background: #fff;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-weight: 600;
+}
+.collectionList .collectionItem .collectionName.name1 {
+  background: rgb(250, 237, 184);
+}
+.collectionList .collectionItem .collectionName.name3 {
+  background: rgb(247, 193, 252);
+  margin-right: 0px;
+}
