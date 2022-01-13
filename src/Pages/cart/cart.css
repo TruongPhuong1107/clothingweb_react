@@ -5,7 +5,7 @@ main {
   display: flex;
   justify-content: center;
 }
-.isEmpty{
+.isEmpty {
   text-align: center;
 }
 .tableItem {

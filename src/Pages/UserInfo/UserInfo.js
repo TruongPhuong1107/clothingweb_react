@@ -40,11 +40,7 @@ const UserInfo = () => {
           }
           placeholder="Nơi giao"
         />
-        <input
-          type="email"
-          className="email"
-          placeholder="Email"
-        />
+        <input type="email" className="email" placeholder="Email" />
         <input
           type="text"
           className="phone-number"

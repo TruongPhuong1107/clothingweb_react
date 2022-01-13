@@ -7,33 +7,49 @@ function Checkout(props) {
   const customerInfo = props.location.state;
   const products = JSON.parse(sessionStorage.getItem('productCart'));
   const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
-  const total = products.reduce((total,item)=>(total+=(item.dongia*item.soluong)),0);
+  const total = products.reduce(
+    (total, item) => (total += item.dongia * item.soluong),
+    0,
+  );
   const history = useHistory();
   const handleCheckout = () => {
-    const today=new Date();
-    const ngaylap=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    
+    const today = new Date();
+    const ngaylap =
+      today.getFullYear() +
+      '-' +
+      (today.getMonth() + 1) +
+      '-' +
+      today.getDate();
+
     const productList = [];
-    products.forEach(item => {
+    products.forEach((item) => {
       const productItem = {};
       productItem.masp = item.masp;
       productItem.mamau = item.mamau;
       productItem.makt = item.makt;
       productItem.soluong = item.soluong;
       productItem.dongia = item.dongia;
-      productList.push(productItem)
+      productList.push(productItem);
     });
-    const data = {makh:userInfo.matk,ngaylap:ngaylap,tongtien:total,trangthai:0,...customerInfo, cthd:productList}
-    console.log(data)
-    axios.post('http://localhost:3002/hoadon', data)
-    .then(function () {
-      sessionStorage.removeItem('productCart')
-      history.push('/')
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+    const data = {
+      makh: userInfo.matk,
+      ngaylap: ngaylap,
+      tongtien: total,
+      trangthai: 0,
+      ...customerInfo,
+      cthd: productList,
+    };
+    console.log(data);
+    axios
+      .post('http://localhost:3002/hoadon', data)
+      .then(function () {
+        sessionStorage.removeItem('productCart');
+        history.push('/');
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   return (
     <>
       <Header />
@@ -41,7 +57,7 @@ function Checkout(props) {
         <div className="productsCheckout">
           <h2>THÔNG TIN SẢN PHẨM</h2>
           <div className="product-list">
-            {products.map((item,index) => (
+            {products.map((item, index) => (
               <div key={index}>
                 <div>{item.tensp}</div>
                 <div>

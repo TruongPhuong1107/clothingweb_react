@@ -35,7 +35,7 @@ function Description(props) {
         masp: product.masp,
         hinh: product.hinh,
         tensp: product.tensp,
-        makt:sizeRef.current.value,
+        makt: sizeRef.current.value,
         tenkt: sizeRef.current.selectedOptions[0].text,
         mamau: colorRef.current.value,
         tenmau: colorRef.current.selectedOptions[0].text,
@@ -89,7 +89,9 @@ function Description(props) {
               <br></br>
               <select name="color" id="color-select" ref={colorRef}>
                 {(product.chitietmau || []).map((item) => (
-                  <option key={item.mamau} value={item.mamau}>{item.tenmau}</option>
+                  <option key={item.mamau} value={item.mamau}>
+                    {item.tenmau}
+                  </option>
                 ))}
               </select>
             </div>
@@ -98,7 +100,9 @@ function Description(props) {
               <br></br>
               <select name="size" id="custom-select" ref={sizeRef}>
                 {(product.chitietkt || []).map((item) => (
-                  <option key={item.makt} value={item.makt}>{item.tenkt}</option>
+                  <option key={item.makt} value={item.makt}>
+                    {item.tenkt}
+                  </option>
                 ))}
               </select>
             </div>

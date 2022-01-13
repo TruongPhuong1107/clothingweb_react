@@ -7,8 +7,8 @@ import './cart.css';
 const Cart = () => {
   const [productCart, setProductCart] = useState([]);
   const history = useHistory();
-  if(JSON.parse(sessionStorage.getItem('productCart'))!=null){
-    setProductCart(JSON.parse(sessionStorage.getItem('productCart')))
+  if (JSON.parse(sessionStorage.getItem('productCart')) != null) {
+    setProductCart(JSON.parse(sessionStorage.getItem('productCart')));
   }
   const isEmpty = !productCart.length;
   const handleTotal = (productList) => {
@@ -86,7 +86,7 @@ const Cart = () => {
               </div>
             </div>
           ) : (
-            <div className='isEmpty'>Không có sản phẩm nào trong giỏ</div>
+            <div className="isEmpty">Không có sản phẩm nào trong giỏ</div>
           )}
         </div>
       </main>
